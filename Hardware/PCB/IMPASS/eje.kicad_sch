@@ -1,0 +1,1620 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "3f1c831d-0052-4ccb-9e92-aecc56f9e6ce")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Transistor_FET:DMN3008SFG"
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "DMN3008SFG"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_SON:Diodes_PowerDI3333-8"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMN3008SFG.pdf"
+				(at 5.08 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "17.6A Id, 30V Vds, N-Channel Power MOSFET, 4.4mOhm Ron, 86nC Qg (typ), PowerDI3333-8"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "N-Channel MOSFET"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Diodes*PowerDI3333*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "DMN3008SFG_0_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 0.254 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "DMN3008SFG_1_1"
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54) hide
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54) hide
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 139.7 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2141fd80-9371-4cd4-bee7-82ea1deef3a5")
+	)
+	(junction
+		(at 156.21 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "39f70e98-2a66-4751-abd2-88a584fdf00b")
+	)
+	(junction
+		(at 156.21 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5983cf7c-d7c1-4982-86ab-47c18ebb0715")
+	)
+	(junction
+		(at 123.19 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "729d133b-d170-4942-ab94-0a5949e5ed70")
+	)
+	(junction
+		(at 139.7 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "838abe83-0e51-4bbd-b7a9-bf14b1f2c500")
+	)
+	(junction
+		(at 123.19 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d6b6f3fe-eb01-451a-aab7-ed62567b8fd9")
+	)
+	(junction
+		(at 139.7 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e62b4695-18a2-425c-9916-0674868b5f72")
+	)
+	(junction
+		(at 139.7 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ea54678f-4827-4ed7-941b-c0b42c64c2b8")
+	)
+	(wire
+		(pts
+			(xy 123.19 101.6) (xy 123.19 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "043d503c-c007-421b-88b3-29e09ca45bee")
+	)
+	(wire
+		(pts
+			(xy 123.19 99.06) (xy 139.7 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f4936a9-0ead-464e-aa86-3072ca628955")
+	)
+	(wire
+		(pts
+			(xy 139.7 99.06) (xy 156.21 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13a49f80-6332-44f2-83d0-3266d2d1f6cd")
+	)
+	(wire
+		(pts
+			(xy 139.7 80.01) (xy 156.21 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17611d9b-629a-4666-ae1c-b0003645851d")
+	)
+	(wire
+		(pts
+			(xy 123.19 113.03) (xy 123.19 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f02cd1a-12de-416a-88c0-4970b8a847b4")
+	)
+	(wire
+		(pts
+			(xy 123.19 52.07) (xy 123.19 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20af1cdb-3144-4251-9bf7-29d3a2cdcad1")
+	)
+	(wire
+		(pts
+			(xy 123.19 63.5) (xy 123.19 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2548b63e-8dea-4478-ad26-e2d6ca0c3dc3")
+	)
+	(wire
+		(pts
+			(xy 156.21 49.53) (xy 156.21 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "316286ad-b9b0-4b28-85ef-0bc7b6505161")
+	)
+	(wire
+		(pts
+			(xy 110.49 120.65) (xy 115.57 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "320ae643-31aa-4998-8ab1-85b29e32aa81")
+	)
+	(wire
+		(pts
+			(xy 156.21 80.01) (xy 156.21 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37b142b3-6f1c-4b19-a5ad-eae89bcc5212")
+	)
+	(wire
+		(pts
+			(xy 163.83 57.15) (xy 171.45 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3db2d167-e40e-4ba1-a03c-bfea985e2407")
+	)
+	(wire
+		(pts
+			(xy 139.7 49.53) (xy 156.21 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4410360d-6804-4086-983a-57d3f3bd7982")
+	)
+	(wire
+		(pts
+			(xy 156.21 111.76) (xy 156.21 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d50874c-116d-4914-969d-69ebbb327e18")
+	)
+	(wire
+		(pts
+			(xy 139.7 132.08) (xy 139.7 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d47eb99-2257-4cd9-bc0d-1bec92a7d57b")
+	)
+	(wire
+		(pts
+			(xy 123.19 63.5) (xy 128.27 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e85631f-4f60-431c-accc-69f9c2b300b9")
+	)
+	(wire
+		(pts
+			(xy 163.83 71.12) (xy 171.45 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f3ee787-9787-4cfc-b704-ee1501c1be5b")
+	)
+	(wire
+		(pts
+			(xy 149.86 63.5) (xy 156.21 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6546de8b-5e58-44ff-a374-3db6bac0e157")
+	)
+	(wire
+		(pts
+			(xy 123.19 49.53) (xy 139.7 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a4aa3fa-6dd7-4f43-a137-49ba9c309dbc")
+	)
+	(wire
+		(pts
+			(xy 156.21 113.03) (xy 156.21 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e046c78-4e07-47e0-a55a-7620ed072f71")
+	)
+	(wire
+		(pts
+			(xy 123.19 62.23) (xy 123.19 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80099122-41f9-45e4-bff3-b62478bfb50d")
+	)
+	(wire
+		(pts
+			(xy 123.19 80.01) (xy 139.7 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "889de4a4-cf5e-4a9c-a17f-ef3c8b4ff00c")
+	)
+	(wire
+		(pts
+			(xy 156.21 63.5) (xy 156.21 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9fb15c41-5260-4841-baa1-81e7f47667d8")
+	)
+	(wire
+		(pts
+			(xy 156.21 62.23) (xy 156.21 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a379cd4c-0e70-42bb-807a-7502b6ce5ee0")
+	)
+	(wire
+		(pts
+			(xy 110.49 106.68) (xy 115.57 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af06a00d-6af6-4544-b756-a43b915591e5")
+	)
+	(wire
+		(pts
+			(xy 109.22 57.15) (xy 115.57 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b526610e-9220-44a0-a1ac-a65fef70893d")
+	)
+	(wire
+		(pts
+			(xy 139.7 129.54) (xy 156.21 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8a4ef80-c3b5-4eb5-bd57-1f57f434578e")
+	)
+	(wire
+		(pts
+			(xy 139.7 46.99) (xy 139.7 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9545a8f-a240-4211-a359-a93cf669d716")
+	)
+	(wire
+		(pts
+			(xy 109.22 71.12) (xy 115.57 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb62d341-3116-438c-879f-dc902fcacaa3")
+	)
+	(wire
+		(pts
+			(xy 163.83 106.68) (xy 172.72 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf9920c1-ed83-4db3-ba29-a4b73cdc3e91")
+	)
+	(wire
+		(pts
+			(xy 123.19 111.76) (xy 123.19 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc328a8d-c4e7-4088-9d26-f42f8f2495d4")
+	)
+	(wire
+		(pts
+			(xy 163.83 120.65) (xy 172.72 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0574b12-d8a5-4c65-8f25-17f9c03540a2")
+	)
+	(wire
+		(pts
+			(xy 123.19 113.03) (xy 128.27 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d36dba82-433d-405c-aad3-cbcf1fbdf85b")
+	)
+	(wire
+		(pts
+			(xy 156.21 129.54) (xy 156.21 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4a29bc3-709f-48f6-b839-00cb0bd861af")
+	)
+	(wire
+		(pts
+			(xy 139.7 82.55) (xy 139.7 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc74b544-7691-4eeb-b776-80a47abcb71f")
+	)
+	(wire
+		(pts
+			(xy 139.7 96.52) (xy 139.7 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dec3a4a0-3b2d-4492-a5dd-82e066b03ae1")
+	)
+	(wire
+		(pts
+			(xy 123.19 125.73) (xy 123.19 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1bc0c18-7b91-48ab-9bff-b9a3b0b9e1d1")
+	)
+	(wire
+		(pts
+			(xy 123.19 129.54) (xy 139.7 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6ae9f9e-8733-4115-b01c-db4d61c38204")
+	)
+	(wire
+		(pts
+			(xy 149.86 113.03) (xy 156.21 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed033a86-507c-487a-9de3-1c11ebe7ac65")
+	)
+	(wire
+		(pts
+			(xy 156.21 99.06) (xy 156.21 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6ede2c1-d2d9-4a46-a90f-4d6d4811679b")
+	)
+	(wire
+		(pts
+			(xy 123.19 76.2) (xy 123.19 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fac90c77-584e-4f3b-9148-ed90d884ef1b")
+	)
+	(hierarchical_label "~PWM2"
+		(shape input)
+		(at 172.72 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "00256144-0b52-4c0e-83d2-fd2092aa61af")
+	)
+	(hierarchical_label "PWM1"
+		(shape input)
+		(at 109.22 57.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0060ac95-f733-4e88-8b27-b8945e5accd1")
+	)
+	(hierarchical_label "OUT2_1"
+		(shape output)
+		(at 149.86 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "08e92ade-ba38-406b-b401-58376ff39602")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 139.7 132.08 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0c243f06-e728-435f-a21b-9eb5e9b1ce12")
+	)
+	(hierarchical_label "PWM2"
+		(shape input)
+		(at 110.49 106.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "275141df-eeb9-49ab-998c-7a6981a06c03")
+	)
+	(hierarchical_label "Vm"
+		(shape input)
+		(at 139.7 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "374c88f2-aa37-42c4-b989-84cf20b7339f")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 139.7 82.55 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6a27e38e-30c9-45b2-a4f0-c8d29fbbd92b")
+	)
+	(hierarchical_label "~DIR1"
+		(shape input)
+		(at 171.45 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8dbdc7e5-fd6d-4d89-a65e-b5e6a66d0934")
+	)
+	(hierarchical_label "OUT1_2"
+		(shape output)
+		(at 128.27 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9a33cb6d-3dcd-4b08-85c7-136da3387896")
+	)
+	(hierarchical_label "DIR2"
+		(shape input)
+		(at 110.49 120.65 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b19a5cb3-3985-4d04-b2b7-1099abd066fe")
+	)
+	(hierarchical_label "Vm"
+		(shape input)
+		(at 139.7 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b87cba84-0581-406d-ae54-eb37971ea01b")
+	)
+	(hierarchical_label "OUT2_2"
+		(shape output)
+		(at 149.86 113.03 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c75a10e9-40a5-45fe-a24b-a62baf6196ca")
+	)
+	(hierarchical_label "~DIR2"
+		(shape input)
+		(at 172.72 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dee6673e-678a-41fa-bf40-3494d411b95a")
+	)
+	(hierarchical_label "DIR1"
+		(shape input)
+		(at 109.22 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e8df02b8-fef9-40c8-a52e-191b38f10f03")
+	)
+	(hierarchical_label "OUT1_1"
+		(shape output)
+		(at 128.27 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f10cd9f0-22f9-407a-9568-18a879f1003c")
+	)
+	(hierarchical_label "~PWM1"
+		(shape input)
+		(at 171.45 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f64cd349-e13f-4738-9b4a-98fe701e837a")
+	)
+	(symbol
+		(lib_id "Transistor_FET:DMN3008SFG")
+		(at 158.75 120.65 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2f3757ac-3155-43d3-b6c8-c022f64c3d23")
+		(property "Reference" "Q7"
+			(at 152.4 119.3799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DMN3008SFG"
+			(at 152.4 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Diodes_PowerDI3333-8"
+			(at 153.67 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMN3008SFG.pdf"
+			(at 153.67 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "17.6A Id, 30V Vds, N-Channel Power MOSFET, 4.4mOhm Ron, 86nC Qg (typ), PowerDI3333-8"
+			(at 158.75 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "fa9a00de-b2fb-4b6a-baa3-bf9037568038")
+		)
+		(pin "2"
+			(uuid "457fab47-52bd-49b8-adbe-d08cd98f64dd")
+		)
+		(pin "3"
+			(uuid "31b3d4b3-b5f6-426d-a5d2-0a80c856a45d")
+		)
+		(pin "4"
+			(uuid "25fb5938-21a4-4aa8-bc34-f762abbaecab")
+		)
+		(pin "1"
+			(uuid "219621a7-66d0-4dae-ad82-1c804c781a10")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/282207d6-070c-438a-a843-1ec79ebecd96"
+					(reference "Q7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:DMN3008SFG")
+		(at 120.65 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "38aa6623-486f-4bf7-b27b-13e98af81c39")
+		(property "Reference" "Q3"
+			(at 127 69.8499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DMN3008SFG"
+			(at 127 72.3899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Diodes_PowerDI3333-8"
+			(at 125.73 73.025 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMN3008SFG.pdf"
+			(at 125.73 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "17.6A Id, 30V Vds, N-Channel Power MOSFET, 4.4mOhm Ron, 86nC Qg (typ), PowerDI3333-8"
+			(at 120.65 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "79abf7aa-708a-42e5-976e-6e74358ac8d0")
+		)
+		(pin "2"
+			(uuid "e67618b0-03fe-4183-8ffa-9e761415ae19")
+		)
+		(pin "3"
+			(uuid "7953bf49-eccf-4a78-a221-0e9d4017fcce")
+		)
+		(pin "4"
+			(uuid "0ac0b26f-6201-44bc-b61d-f979eff64728")
+		)
+		(pin "1"
+			(uuid "33b418d7-9f07-4979-8c76-97234bfdda88")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/282207d6-070c-438a-a843-1ec79ebecd96"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:DMN3008SFG")
+		(at 120.65 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "41da975e-36fa-4092-97dd-b5c8b3d060c7")
+		(property "Reference" "Q5"
+			(at 127 105.4099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DMN3008SFG"
+			(at 127 107.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Diodes_PowerDI3333-8"
+			(at 125.73 108.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMN3008SFG.pdf"
+			(at 125.73 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "17.6A Id, 30V Vds, N-Channel Power MOSFET, 4.4mOhm Ron, 86nC Qg (typ), PowerDI3333-8"
+			(at 120.65 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "412a19fd-2e10-41c8-a430-5b4c51926835")
+		)
+		(pin "2"
+			(uuid "1e5a0a1f-f9d9-4a23-a04f-bb5dbb853dfe")
+		)
+		(pin "3"
+			(uuid "0f027b0d-8bb1-402a-9002-926f4c5b0dd6")
+		)
+		(pin "4"
+			(uuid "c5e7575a-2750-4af7-b5d6-3d4aed658592")
+		)
+		(pin "1"
+			(uuid "82747cd0-8525-4550-8e75-603110fa7d6c")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/282207d6-070c-438a-a843-1ec79ebecd96"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:DMN3008SFG")
+		(at 120.65 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "65b1d42f-375e-4dd5-abfb-8054ff974efb")
+		(property "Reference" "Q6"
+			(at 127 119.3799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DMN3008SFG"
+			(at 127 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Diodes_PowerDI3333-8"
+			(at 125.73 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMN3008SFG.pdf"
+			(at 125.73 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "17.6A Id, 30V Vds, N-Channel Power MOSFET, 4.4mOhm Ron, 86nC Qg (typ), PowerDI3333-8"
+			(at 120.65 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "466a06e3-2043-40a0-ad55-62ca11e00681")
+		)
+		(pin "2"
+			(uuid "64bae5ef-d1c8-42ab-b82c-d479f6e3f3ba")
+		)
+		(pin "3"
+			(uuid "7165df31-f8ac-44a9-a6a8-8deb2a98eaeb")
+		)
+		(pin "4"
+			(uuid "84eab51c-c29b-425e-af65-d4384b9858b3")
+		)
+		(pin "1"
+			(uuid "568c582f-05dd-43b6-aa10-f957d2e239b7")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/282207d6-070c-438a-a843-1ec79ebecd96"
+					(reference "Q6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:DMN3008SFG")
+		(at 158.75 71.12 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6738c2db-be4c-403d-9f5d-9f0a283229a6")
+		(property "Reference" "Q4"
+			(at 152.4 69.8499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DMN3008SFG"
+			(at 152.4 72.3899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Diodes_PowerDI3333-8"
+			(at 153.67 73.025 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMN3008SFG.pdf"
+			(at 153.67 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "17.6A Id, 30V Vds, N-Channel Power MOSFET, 4.4mOhm Ron, 86nC Qg (typ), PowerDI3333-8"
+			(at 158.75 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "f7656f71-fb18-47ed-b18f-d9c06bb67f45")
+		)
+		(pin "2"
+			(uuid "607280ec-9b13-47ea-95df-11a65cb7faec")
+		)
+		(pin "3"
+			(uuid "46670103-4cc0-4ff6-b8dd-60cd7a020772")
+		)
+		(pin "4"
+			(uuid "9659842f-805e-4167-8c2d-bb5f6e45707b")
+		)
+		(pin "1"
+			(uuid "1ddd16cd-1ea3-4225-b527-9b925e316a63")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/282207d6-070c-438a-a843-1ec79ebecd96"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:DMN3008SFG")
+		(at 158.75 106.68 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6bd83de7-dd66-47a7-a86c-d8c7094436d1")
+		(property "Reference" "Q8"
+			(at 152.4 105.4099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DMN3008SFG"
+			(at 152.4 107.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Diodes_PowerDI3333-8"
+			(at 153.67 108.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMN3008SFG.pdf"
+			(at 153.67 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "17.6A Id, 30V Vds, N-Channel Power MOSFET, 4.4mOhm Ron, 86nC Qg (typ), PowerDI3333-8"
+			(at 158.75 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "f32ad94c-9418-448d-b262-909829910fc6")
+		)
+		(pin "2"
+			(uuid "a30cd2e7-80f0-41ad-aef8-3d6a3bd27292")
+		)
+		(pin "3"
+			(uuid "a634b5ab-f199-45fc-8ae0-c829463f8574")
+		)
+		(pin "4"
+			(uuid "44f68eeb-13c6-4c8e-9322-b7323474427b")
+		)
+		(pin "1"
+			(uuid "216804cc-a9be-48b1-af12-5ebd9527ce0f")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/282207d6-070c-438a-a843-1ec79ebecd96"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:DMN3008SFG")
+		(at 120.65 57.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7eb008ba-dac9-4728-a976-3b917719cd3d")
+		(property "Reference" "Q1"
+			(at 127 55.8799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DMN3008SFG"
+			(at 127 58.4199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Diodes_PowerDI3333-8"
+			(at 125.73 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMN3008SFG.pdf"
+			(at 125.73 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "17.6A Id, 30V Vds, N-Channel Power MOSFET, 4.4mOhm Ron, 86nC Qg (typ), PowerDI3333-8"
+			(at 120.65 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "ac466c1d-eadb-4b1c-bc4c-4c13f5d72e5c")
+		)
+		(pin "2"
+			(uuid "c6d7b95d-c98e-4612-ae1b-3527a2752db2")
+		)
+		(pin "3"
+			(uuid "10e450c5-c86b-4c90-9577-19ae0da76701")
+		)
+		(pin "4"
+			(uuid "872f2ee0-7bc0-47d3-b756-2c4ec5515798")
+		)
+		(pin "1"
+			(uuid "2757c65f-c986-45c2-b76e-78ae470b1a44")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/282207d6-070c-438a-a843-1ec79ebecd96"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:DMN3008SFG")
+		(at 158.75 57.15 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "af311a4d-c54d-4276-9300-47037e553589")
+		(property "Reference" "Q2"
+			(at 152.4 55.8799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DMN3008SFG"
+			(at 152.4 58.4199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Diodes_PowerDI3333-8"
+			(at 153.67 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMN3008SFG.pdf"
+			(at 153.67 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "17.6A Id, 30V Vds, N-Channel Power MOSFET, 4.4mOhm Ron, 86nC Qg (typ), PowerDI3333-8"
+			(at 158.75 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "7904b779-e615-4c61-b41b-e89655cbe923")
+		)
+		(pin "2"
+			(uuid "ded978e1-f15f-46b7-a65d-6442421a1236")
+		)
+		(pin "3"
+			(uuid "2bc2ef1f-341e-4d1e-ae91-164a2d722e8a")
+		)
+		(pin "4"
+			(uuid "4ad4ca38-2184-45d8-90f1-e861761acb54")
+		)
+		(pin "1"
+			(uuid "729c38e7-58e4-4eb0-9fd1-62e3f5d5bc6f")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/282207d6-070c-438a-a843-1ec79ebecd96"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
