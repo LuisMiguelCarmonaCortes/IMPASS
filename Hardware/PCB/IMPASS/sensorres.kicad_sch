@@ -411,6 +411,142 @@
 				)
 			)
 		)
+		(symbol "Device:C"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:R"
 			(pin_numbers hide)
 			(pin_names
@@ -1540,6 +1676,16 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 120.65) (xy 95.25 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b404d4e-39f5-4db0-8ba8-72ca8da6eee5")
+	)
+	(wire
+		(pts
 			(xy 77.47 162.56) (xy 68.58 162.56)
 		)
 		(stroke
@@ -1667,6 +1813,16 @@
 			(type default)
 		)
 		(uuid "2573b291-fc20-49f4-9669-6233291cc948")
+	)
+	(wire
+		(pts
+			(xy 167.64 85.09) (xy 173.99 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30ed9ed9-4ab3-485a-9ebd-60fa19613394")
 	)
 	(wire
 		(pts
@@ -1950,6 +2106,16 @@
 	)
 	(wire
 		(pts
+			(xy 167.64 121.92) (xy 172.72 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86dbedf5-18c2-4b44-afbe-3ec074d8d9c5")
+	)
+	(wire
+		(pts
 			(xy 213.36 48.26) (xy 191.77 48.26)
 		)
 		(stroke
@@ -2100,6 +2266,16 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 49.53) (xy 95.25 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba5be88d-50dd-431e-9976-886a53ae384f")
+	)
+	(wire
+		(pts
 			(xy 130.81 46.99) (xy 115.57 46.99)
 		)
 		(stroke
@@ -2207,6 +2383,16 @@
 			(type default)
 		)
 		(uuid "f0c75c80-580d-4087-83e3-bbe70fd5174d")
+	)
+	(wire
+		(pts
+			(xy 91.44 83.82) (xy 95.25 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f22e03ec-9142-4ac7-9030-03387c69bda3")
 	)
 	(wire
 		(pts
@@ -2763,6 +2949,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND1")
+		(at 172.72 129.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3a9a2f69-aa2e-4fc0-973e-494c25f256d8")
+		(property "Reference" "#PWR065"
+			(at 172.72 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND1"
+			(at 172.72 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 172.72 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 172.72 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "162b224d-51ab-4c9f-a2fb-7504af7427ed")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
+					(reference "#PWR065")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 176.53 82.55 90)
 		(unit 1)
@@ -3254,6 +3506,72 @@
 	)
 	(symbol
 		(lib_id "power:GND1")
+		(at 95.25 57.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5fe352cd-80e7-4286-94f2-68f7f675a0d5")
+		(property "Reference" "#PWR062"
+			(at 95.25 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND1"
+			(at 95.25 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.25 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 95.25 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f6b5873d-237d-47f9-b685-e9d14606ab43")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
+					(reference "#PWR062")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND1")
 		(at 81.28 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3445,6 +3763,76 @@
 			(project "IMPASS"
 				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
 					(reference "#PWR042")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 95.25 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7086a5f8-311e-45ef-ab6d-b81bc246d259")
+		(property "Reference" "C11"
+			(at 99.06 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF"
+			(at 99.06 54.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 96.2152 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 95.25 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "22e109f0-cd31-4671-862a-38dfea58af32")
+		)
+		(pin "1"
+			(uuid "f3da5103-f684-4d41-9cfb-fd25084afd69")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -3665,6 +4053,76 @@
 			(project "IMPASS"
 				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
 					(reference "R24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 172.72 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "873b5873-18dc-43e5-baad-fb749163c14e")
+		(property "Reference" "C14"
+			(at 176.53 124.4599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF"
+			(at 176.53 126.9999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 173.6852 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 172.72 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 172.72 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1a3b2bab-756c-44ea-afd9-3f6d322bb934")
+		)
+		(pin "1"
+			(uuid "24e20379-dae4-4a40-8e30-6ccacd900e87")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -4425,6 +4883,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 172.72 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b1f5e645-b9f9-411f-928d-90d59b684a23")
+		(property "Reference" "C16"
+			(at 176.53 53.3399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF"
+			(at 176.53 55.8799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 173.6852 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 172.72 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 172.72 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "761d0aa9-61fe-4aef-ab1b-d3ff2b5a0c59")
+		)
+		(pin "1"
+			(uuid "75763fb1-6dbf-4a04-ac71-c78528455756")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
+					(reference "C16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Sensor_Temperature:LM75B")
 		(at 58.42 162.56 0)
 		(unit 1)
@@ -4575,6 +5103,76 @@
 			(project "IMPASS"
 				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
 					(reference "R26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 95.25 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b67a20af-2ac5-4aaa-80e6-2c3eb6ecf014")
+		(property "Reference" "C12"
+			(at 99.06 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF"
+			(at 99.06 88.8999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 96.2152 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 95.25 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "97612a37-8a7c-4d23-ab40-aaaa48873e4c")
+		)
+		(pin "1"
+			(uuid "5bcc022f-a0d1-4b07-bade-7cc6d833886c")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -4954,6 +5552,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 173.99 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c3711fdd-9777-4e5f-a633-7f350579b4ce")
+		(property "Reference" "C15"
+			(at 177.8 87.6299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF"
+			(at 177.8 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 174.9552 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 173.99 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 173.99 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "80c2227b-8e70-4aab-be30-5a78eccbef61")
+		)
+		(pin "1"
+			(uuid "cb9978ff-72bb-417e-9204-5c13ef8f9a5b")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
+					(reference "C15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND1")
 		(at 58.42 170.18 0)
 		(unit 1)
@@ -5086,6 +5754,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND1")
+		(at 173.99 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e82ac6fd-7783-4b28-af57-30b6d895c529")
+		(property "Reference" "#PWR066"
+			(at 173.99 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND1"
+			(at 173.99 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.99 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 173.99 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "831a0b8d-cb49-49f1-a3a7-ed58c97360ed")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
+					(reference "#PWR066")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Sensor_Temperature:LM75B")
 		(at 129.54 162.56 0)
 		(unit 1)
@@ -5174,6 +5908,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND1")
+		(at 95.25 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ef627270-9999-48dd-9ed8-316b472e64f0")
+		(property "Reference" "#PWR063"
+			(at 95.25 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND1"
+			(at 95.25 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.25 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 95.25 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c4b4ed28-5039-4727-8822-d3fa88a4fa9f")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
+					(reference "#PWR063")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5VA")
 		(at 81.28 107.95 0)
 		(unit 1)
@@ -5234,6 +6034,208 @@
 			(project "IMPASS"
 				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
 					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND1")
+		(at 95.25 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f3f5c288-354f-4cfc-9557-4706358b95a5")
+		(property "Reference" "#PWR064"
+			(at 95.25 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND1"
+			(at 95.25 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.25 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 95.25 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bd1afb4f-b7f8-4062-994a-ea286284b256")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
+					(reference "#PWR064")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 95.25 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f8673667-eaab-405f-baa9-d6d0bdbe453e")
+		(property "Reference" "C13"
+			(at 99.06 123.1899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF"
+			(at 99.06 125.7299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 96.2152 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 95.25 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d543f801-5c80-4f8a-9fdf-bc34228c1156")
+		)
+		(pin "1"
+			(uuid "21cc037d-dcff-4fba-8333-1a900f7ecb39")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
+					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND1")
+		(at 172.72 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fac17944-7879-46f7-9a95-033c452fd887")
+		(property "Reference" "#PWR067"
+			(at 172.72 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND1"
+			(at 172.72 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 172.72 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 172.72 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0b2876a9-918e-4536-b672-c096ab433446")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/49829ea8-a4e5-4995-bf52-a268b58dc837"
+					(reference "#PWR067")
 					(unit 1)
 				)
 			)
