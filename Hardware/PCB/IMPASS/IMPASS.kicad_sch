@@ -4,6 +4,13 @@
 	(generator_version "8.0")
 	(uuid "731b3037-3e9a-4423-b2c0-b5bf223d88c2")
 	(paper "A4")
+	(title_block
+		(title "IMPASS ")
+		(date "2026-01-12")
+		(rev "v1.0")
+		(company "Luis Miguel Carmona Cortés")
+		(comment 1 "Bloques globales")
+	)
 	(lib_symbols)
 	(wire
 		(pts

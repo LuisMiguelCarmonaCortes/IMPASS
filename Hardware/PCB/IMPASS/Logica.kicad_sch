@@ -4,6 +4,15 @@
 	(generator_version "8.0")
 	(uuid "43c0a7ac-42c5-4b7d-9bbf-fa590381f525")
 	(paper "A4")
+	(title_block
+		(title "IMPASS ")
+		(date "2026-01-12")
+		(rev "v1.0")
+		(company "Luis Miguel Carmona Cortés")
+		(comment 1 "Lógica electrónica para poder controlar con 2 pines los puentes H")
+		(comment 2 "Connectores para recibir las señales de los sensores")
+		(comment 3 "Progrmación de la ESP32-S3")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x03_Pin"
 			(pin_names

@@ -4,6 +4,13 @@
 	(generator_version "8.0")
 	(uuid "788ddef3-4941-43d0-abc9-ea6f3639b85f")
 	(paper "A4")
+	(title_block
+		(title "IMPASS ")
+		(date "2026-01-12")
+		(rev "v1.0")
+		(company "Luis Miguel Carmona Cortés")
+		(comment 1 "Puentes H del eje3")
+	)
 	(lib_symbols
 		(symbol "Transistor_FET:DMN3008SFG"
 			(pin_names hide)

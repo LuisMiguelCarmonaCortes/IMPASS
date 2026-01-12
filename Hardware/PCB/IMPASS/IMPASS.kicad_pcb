@@ -22607,7 +22607,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 0 1.43 90)
+			(at 1.85 -0.09 180)
 			(layer "F.SilkS")
 			(uuid "10c7c5c0-9090-4c99-b7e0-a0752c47269a")
 			(effects
