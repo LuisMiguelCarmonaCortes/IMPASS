@@ -1,0 +1,57 @@
+FARNELL:
+
+Transistores:
+2n7002 x25 -> https://es.farnell.com/multicomp-pro/2n7002k/mosfet-n-ch-60v-0-3a-sot-23/dp/4655268
+
+dmn3008sfg x30 -> https://es.farnell.com/diodes-inc/dmn3008sfg-7/mosfet-canal-n-30v-62a-powerdi/dp/3943570
+
+Leds:
+mp001249 x15 -> https://es.farnell.com/multicomp-pro/mp001249/led-rojo-385mcd-629nm-0603/dp/3265380
+
+Condensadores:
+100nF x 20 -> https://es.farnell.com/kemet/c0603c104k3ractu/conden-0-1-f-25v-10-x7r-0603/dp/1650835
+
+10uF x 5 ->https://es.farnell.com/murata/grm21br61e106ka73k/condensador-10uf-25v-mlcc-0805/dp/3582883
+
+22uf x1 -> https://es.farnell.com/samsung-electro-mechanics/cl21a226maynnne/capacitor-mlcc-22uf-x7r-25v-0805/dp/4539343
+
+1nf x3 -> https://es.farnell.com/murata/grm1885c1h102ja01d/conden-1000pf-50v-5-c0g-np0-0603/dp/8819920
+
+Resistencias:
+10K x25 -> https://es.farnell.com/multicomp-pro/mcwr06x103-jtl/res-10k-5-0-1w-0603-pel-c-gruesa/dp/2694689
+
+21k x1 -> https://es.farnell.com/holsworthy-te-connectivity/rq73c1j21kbtdf/res-21k-0-1-0-15w-0603-thin-film/dp/3104664?cfm=true
+
+1k x1 -> https://es.farnell.com/susumu/rr0816p-102-d/res-thin-film-1k-0-5-0-063w-0603/dp/9364366
+
+2k x3 -> https://es.farnell.com/multicomp-pro/mc008207/res-2k-0-1-0-063w-0603-thin-film/dp/2988468
+
+80 ohmios x 15 ->https://es.farnell.com/bourns/cr0603afx-1000elf/res-100r-1-0-1w-0603-thick-film/dp/3473681
+
+Bobinas:
+10uH x1 -> https://es.farnell.com/multicomp-pro/mp002820/power-inductor-10uh-unshielded/dp/3370474
+
+Diodos:
+ss14 x1 -> https://es.farnell.com/multicomp-pro/ss14l/schottky-rect-single-40v-sod-123fl/dp/3883705
+
+1n4448 x3 -> https://es.farnell.com/vishay/1n4448tap/diodo-peque-a-se-al-100v-0-15a/dp/3774565
+
+INTEGRADOS:
+Fuente de alimentación:
+lmr33630ccda x1 -> https://es.farnell.com/texas-instruments/lmr33630cdda/dc-dc-conv-2-1mhz-so-powerpad/dp/3121646
+
+Medir temperatura:
+lm75 x2 -> https://es.farnell.com/nxp/lm75bd-118/sensor-temperatura-colec-abierto/dp/2841138
+
+Medir consumo:
+acs712 x3 -> https://es.farnell.com/allegro-microsystems/acs712elctr-30a-t/sensor-lineal-corriente-hall-30a/dp/1651975
+
+Conectores:
+pines 2.54 rectos x1 -> https://es.farnell.com/amp-te-connectivity/5-826938-0/conector-macho-50pos-1-fila-2/dp/3792917
+
+pines 2.54 angulo x1 -> https://es.farnell.com/multicomp-pro/2211r-09g/conector-macho-9pos-r-1-fila-2/dp/2847148
+
+de tornillo x 1 -> https://es.farnell.com/multicomp-pro/mp008513/tb-wire-to-brd-r-a-2way-18awg/dp/3817460
+
+ALIEXPRESS:
+esp32-s3-wroom-1-n16r2 ->https://www.aliexpress.com/p/tesla-landing/index.html?scenario=c_ppc_item_bridge&productId=1005008754233124&_immersiveMode=true&withMainCard=true&src=google&aff_platform=true&isdl=y&src=google&albch=shopping&acnt=439-079-4345&isdl=y&slnk=&plac=&mtctp=&albl-corriente-hall-30a/dp/1651975
