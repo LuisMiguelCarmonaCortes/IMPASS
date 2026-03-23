@@ -2,7 +2,7 @@
 #include "esp_log.h"
 #include "definitions.h"
 
-// TODO: agregar mutex para proteger
+extern SemaphoreHandle_t spi_mutex;
 
 static const char *TAG = "MCP3008";
 
@@ -27,28 +27,39 @@ mcp3008_Status_t mcp3008_init(mcp3008_t *dev) {
 
 mcp3008_Status_t mcp3008_read_channel (mcp3008_t *dev, uint8_t channel, uint16_t *result)
 {
-    uint8_t tx_data[3] = {START_BYTE, channel, DUMMY_BYTE};
-    uint8_t rx_data[3] = {0};
-
-    // Se prepara el comando
-    spi_transaction_t t = {
-        .length = 8 * 3,
-        .tx_buffer = tx_data,
-        .rx_buffer = rx_data
-    };
-
-    // Se manda el comando por SPI
-    esp_err_t ret = spi_device_transmit(dev->spi_handle, &t);
-    if (ret != ESP_OK)
+    if (spi_mutex == NULL) 
     {
-        ESP_LOGE(TAG, "Fallo al enviar el comando");
-        return SPI_ERROR;
+        return MCP3008_ERROR;
     }
 
-    // El resultado esta en los ultimos 10 bits
-    *result = ((rx_data[1] & 0x03) << 8) | rx_data[2];
+    if (xSemaphoreTake(spi_mutex, portMAX_DELAY))
+    {
+        uint8_t tx_data[3] = {START_BYTE, channel, DUMMY_BYTE};
+        uint8_t rx_data[3] = {0};
 
-    return MCP3008_OK;
+        // Se prepara el comando
+        spi_transaction_t t = {0};
+        t.length = 8 * 3;
+        t.tx_buffer = tx_data;
+        t.rx_buffer = rx_data;
+
+        // Se manda el comando por SPI
+        esp_err_t ret = spi_device_transmit(dev->spi_handle, &t);
+
+        xSemaphoreGive(spi_mutex);
+
+        if (ret != ESP_OK)
+        {
+            ESP_LOGE(TAG, "Fallo al enviar el comando");
+            return SPI_ERROR;
+        }
+
+        // El resultado esta en los ultimos 10 bits
+        *result = ((rx_data[1] & 0x03) << 8) | rx_data[2];
+        
+        return MCP3008_OK;
+    }
+    return MCP3008_ERROR;
 }
 
 mcp3008_Status_t mcp3008_raw_to_mv(mcp3008_t *dev, uint8_t channel, uint16_t *vref_mv)
