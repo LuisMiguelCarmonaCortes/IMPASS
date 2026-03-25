@@ -4,6 +4,13 @@
 	(generator_version "8.0")
 	(uuid "832ce683-268a-4813-9d25-427b6d91d49b")
 	(paper "A4")
+	(title_block
+		(title "IMPASS ")
+		(date "2026-01-12")
+		(rev "v1.0")
+		(company "Luis Miguel Carmona Cortés")
+		(comment 1 "Circuitos de potencia")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x03_Pin"
 			(pin_names

@@ -1,12 +1,21 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "788ddef3-4941-43d0-abc9-ea6f3639b85f")
 	(paper "A4")
+	(title_block
+		(title "IMPASS ")
+		(date "2026-01-31")
+		(rev "v2.0")
+		(company "Luis Miguel Carmona Cortés")
+		(comment 1 "Puentes H del eje3")
+	)
 	(lib_symbols
 		(symbol "Transistor_FET:DMN3008SFG"
-			(pin_names hide)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -103,7 +112,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
+						(xy 0.762 2.286) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -127,34 +136,10 @@
 				)
 				(polyline
 					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
 					)
 					(stroke
 						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
 						(type default)
 					)
 					(fill
@@ -185,6 +170,63 @@
 						(type outline)
 					)
 				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(polyline
 					(pts
 						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
@@ -209,95 +251,8 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 			)
 			(symbol "DMN3008SFG_1_1"
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54) hide
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54) hide
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin passive line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -334,7 +289,64 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(hide yes)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(hide yes)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction
@@ -785,7 +797,7 @@
 		)
 		(uuid "fd1a8cb9-4822-4c62-9458-ec453e24c938")
 	)
-	(hierarchical_label "OUT1_5"
+	(hierarchical_label "OUT5_1"
 		(shape output)
 		(at 111.76 62.23 0)
 		(effects
@@ -796,7 +808,7 @@
 		)
 		(uuid "0b47a221-10f2-4357-96a5-23f66ac511ce")
 	)
-	(hierarchical_label "OUT1_6"
+	(hierarchical_label "OUT6_1"
 		(shape output)
 		(at 111.76 111.76 0)
 		(effects
@@ -840,7 +852,7 @@
 		)
 		(uuid "58951582-05ed-4899-b5db-a6b37ca0f372")
 	)
-	(hierarchical_label "OUT2_5"
+	(hierarchical_label "OUT5_2"
 		(shape output)
 		(at 133.35 62.23 180)
 		(effects
@@ -895,7 +907,7 @@
 		)
 		(uuid "7818e68e-2602-4da7-b1c7-31234207a678")
 	)
-	(hierarchical_label "OUT2_6"
+	(hierarchical_label "OUT6_2"
 		(shape output)
 		(at 133.35 111.76 180)
 		(effects
@@ -1036,7 +1048,7 @@
 		)
 		(instances
 			(project "IMPASS"
-				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/e6bf87d9-9b17-4c78-8408-bae94d45215c"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/acd98061-6367-4cb8-aa42-1ec0ef88ad06/46ad667e-284c-4a90-8298-bcdd50eeeed0"
 					(reference "Q20")
 					(unit 1)
 				)
@@ -1118,7 +1130,7 @@
 		)
 		(instances
 			(project "IMPASS"
-				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/e6bf87d9-9b17-4c78-8408-bae94d45215c"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/acd98061-6367-4cb8-aa42-1ec0ef88ad06/46ad667e-284c-4a90-8298-bcdd50eeeed0"
 					(reference "Q19")
 					(unit 1)
 				)
@@ -1200,7 +1212,7 @@
 		)
 		(instances
 			(project "IMPASS"
-				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/e6bf87d9-9b17-4c78-8408-bae94d45215c"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/acd98061-6367-4cb8-aa42-1ec0ef88ad06/46ad667e-284c-4a90-8298-bcdd50eeeed0"
 					(reference "Q17")
 					(unit 1)
 				)
@@ -1282,7 +1294,7 @@
 		)
 		(instances
 			(project "IMPASS"
-				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/e6bf87d9-9b17-4c78-8408-bae94d45215c"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/acd98061-6367-4cb8-aa42-1ec0ef88ad06/46ad667e-284c-4a90-8298-bcdd50eeeed0"
 					(reference "Q21")
 					(unit 1)
 				)
@@ -1364,7 +1376,7 @@
 		)
 		(instances
 			(project "IMPASS"
-				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/e6bf87d9-9b17-4c78-8408-bae94d45215c"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/acd98061-6367-4cb8-aa42-1ec0ef88ad06/46ad667e-284c-4a90-8298-bcdd50eeeed0"
 					(reference "Q18")
 					(unit 1)
 				)
@@ -1446,7 +1458,7 @@
 		)
 		(instances
 			(project "IMPASS"
-				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/e6bf87d9-9b17-4c78-8408-bae94d45215c"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/acd98061-6367-4cb8-aa42-1ec0ef88ad06/46ad667e-284c-4a90-8298-bcdd50eeeed0"
 					(reference "Q22")
 					(unit 1)
 				)
@@ -1528,7 +1540,7 @@
 		)
 		(instances
 			(project "IMPASS"
-				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/e6bf87d9-9b17-4c78-8408-bae94d45215c"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/acd98061-6367-4cb8-aa42-1ec0ef88ad06/46ad667e-284c-4a90-8298-bcdd50eeeed0"
 					(reference "Q23")
 					(unit 1)
 				)
@@ -1610,7 +1622,7 @@
 		)
 		(instances
 			(project "IMPASS"
-				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/f88d884c-2e90-4ed2-b40a-13211fa440f1/e6bf87d9-9b17-4c78-8408-bae94d45215c"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/acd98061-6367-4cb8-aa42-1ec0ef88ad06/46ad667e-284c-4a90-8298-bcdd50eeeed0"
 					(reference "Q24")
 					(unit 1)
 				)
