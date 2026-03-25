@@ -277,6 +277,7 @@ esp_err_t spi_bus_init(spi_host_device_t spi_host)
 
     ESP_LOGI("SPI", "Bus SPI inicializado correctamente");
 
+    // Mutex opcional (como en tu I2C)
     spi_mutex = xSemaphoreCreateMutex();
     if (spi_mutex == NULL) {
         return ESP_ERR_NO_MEM;

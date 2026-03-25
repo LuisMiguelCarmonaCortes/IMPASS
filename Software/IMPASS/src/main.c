@@ -144,7 +144,7 @@ void init_mqtt_tasks()
 
 void init_sensor_tasks()
 {
-    xTaskCreatePinnedToCore(vTaskTemperaturas, "Temperaturas", 4096, NULL, 2, NULL, 1);
+    xTaskCreatePinnedToCore(vTaskTemperaturas, "Temperaturas", 2048, NULL, 2, NULL, 1);
     xTaskCreatePinnedToCore(vTaskIntensidades, "Intensidades", 2048, NULL, 2, NULL, 1);
     xTaskCreatePinnedToCore(vTaskInclinacion, "Inclinacion", 2048, NULL, 2, NULL, 1);
     xTaskCreatePinnedToCore(vTaskMotores, "Motores", 2048, NULL, 3, NULL, 1);
