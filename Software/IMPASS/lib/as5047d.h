@@ -31,6 +31,7 @@
 #ifndef AS5047D_H
 #define AS5047D_H
 
+#include "definitions.h"
 #include <stdint.h>
 #include "driver/spi_master.h"
 
@@ -98,7 +99,7 @@
 /* ===== Estructura del sensor =====*/
 
 typedef struct {
-    spi_device_handle_t spi;
+    spi_device_handle_t spi_handle;
     uint8_t cs_pin;
 
     uint16_t settings1;
@@ -121,7 +122,7 @@ typedef enum {
 as5047d_Status_t as5047d_program(as5047d_t *dev);
 as5047d_Status_t as5047d_init(as5047d_t *dev);
 
-as5047d_Status_t as5047d_read_bits(as5047d_t *dev, uint16_t mascara, uint16_t *dato);
+as5047d_Status_t as5047d_read_bits(as5047d_t *dev, uint16_t registro, uint16_t mascara, uint16_t *dato);
 as5047d_Status_t as5047d_read_register(as5047d_t *dev, uint16_t registro, uint16_t *dato);
 
 as5047d_Status_t as5047d_write_bits(as5047d_t *dev, uint16_t mascara, uint16_t dato);

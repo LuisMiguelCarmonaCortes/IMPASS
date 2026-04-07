@@ -2,12 +2,15 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
+#include "driver/gpio.h"
 #include "esp_log.h"
 #include "lm75.h"
 #include "mcp3008.h"
+#include "as5047d.h"
+#include "mqtt.h"
 #include "definitions.h"
 #include "utils.h"
-#include "driver/gpio.h"
+
 
 #define I2C_MASTER_NUM      I2C_NUM_0
 #define SPI_CONTROLLER      SPI2_HOST
@@ -37,6 +40,7 @@ void vTaskTemperaturas(void *pvParameters)
 
     float temp1, temp2;
 
+    /*TODO: Un topic MQTT hará que se lea una temperatura o las dos*/
     while(1)
     {
         lm75_read_celsius_temp(&sensor_log, &temp1);
@@ -53,18 +57,34 @@ void vTaskIntensidades(void *pvParameters)
     mcp3008_t mcp3008;
     mcp3008_init(&mcp3008);
 
+    float amp;
+
+    /*TODO: un topic de MQTT hara que se lea el canal o canales*/
+    uint8_t canales[] = {MCP_SGL_CH0, MCP_SGL_CH1, MCP_SGL_CH2, MCP_SGL_CH3, MCP_SGL_CH4, MCP_SGL_CH5, MCP_SGL_CH6, MCP_SGL_CH7};
+
     while (1)
     {
+        for(int i = 0; i<8; i++)
+        {
+            mcp3008_amperios(&mcp3008, canales[i], &amp);
+            printf("[Canal %d]: %.2f A\n", i);
+        }
+        
         vTaskDelay(pdMS_TO_TICKS(2 * SLEEP_SEGUNDO));
     }
 }
 
 void vTaskInclinacion(void *pvParameters)
 {
-    
+    as5047d_t as5047d;
+    as5047d_init(&as5047d);
+
+    uint16_t ang;
 
     while (1)
     {
+        as5047d_read_bits(&as5047d, AS5047D_ANGLEUNC, NULL, &ang);
+        printf("[AS5047D] %u\n", ang);
         vTaskDelay(pdMS_TO_TICKS(3 * SLEEP_SEGUNDO));
     }
 }
@@ -116,25 +136,45 @@ void vTaskMotores(void *pvParameters)
 
 void recibir_MQTT(void *pvParameters)
 {
-    
+    mqtt_msg_t msg;
+
     while (1)
     {
-        vTaskDelay(pdMS_TO_TICKS(SLEEP_SEGUNDO));
+        if (xQueueReceive(mqtt_rx_queue, &msg, portMAX_DELAY))
+        {
+            printf("CMD recibido:\n");
+            printf("TOPIC: %s\n", msg.topic);
+            printf("DATA: %s\n", msg.data);
+
+            // Aquí decides qué hacer
+            // Ejemplo:
+            if (strcmp(msg.topic, "impass/motor") == 0)
+            {
+                // actuar sobre motores
+            }
+        }
     }
 }
 
 void mandar_MQTT(void *pvParameters)
 {
-    
+    mqtt_msg_t msg;
+
     while (1)
     {
-        vTaskDelay(pdMS_TO_TICKS(2 * SLEEP_SEGUNDO));
+        if (xQueueReceive(mqtt_tx_queue, &msg, portMAX_DELAY))
+        {
+            ESP_LOGI("MQTT_TX", "Enviando -> Topic: %s | Data: %s", msg.topic, msg.data);
+
+            mqtt_publish(msg.topic, msg.data);
+        }
     }
 }
 
 
 void init_mqtt_tasks()
 {
+    system_init();
     // Recibir mensajes MQTT en núcleo 0
     xTaskCreatePinnedToCore(recibir_MQTT,"RecibirMQTT", 4096, NULL, 2, NULL, 0);
 
