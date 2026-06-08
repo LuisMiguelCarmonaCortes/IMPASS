@@ -1,6 +1,8 @@
 # Makefile para test unitarios del sistema IMPASS
 ENV = esp32-s3-custom-uart
 
+PORT = /dev/ttyACM0
+
 .PHONY: lm75_log lm75_pot all_tests build deploy monitor all clean
 
 # --- Tests de LM75 ---
@@ -22,11 +24,11 @@ build:
 
 deploy:
 	@echo "Cargando firmware en la placa..."
-	pio run -e $(ENV) --target upload
+	pio run -e $(ENV) --target upload --upload-port $(PORT)
 
 monitor:
 	@echo "Abriendo monitor serie..."
-	pio device monitor -e $(ENV)
+	pio device monitor -e $(ENV) --port $(PORT)
 
 all: build deploy monitor
 

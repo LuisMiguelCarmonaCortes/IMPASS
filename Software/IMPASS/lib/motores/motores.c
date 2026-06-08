@@ -55,13 +55,13 @@ motores_Status_t motores_init(uint32_t resolution, uint32_t period)
 
         if(mcpwm_new_operator(&operator_config, &oper) != ESP_OK)
         {
-            ESP_LOGE(TAG, "Error al instanciar el operador de la bobina numero %d", i);
+            ESP_LOGE(TAG, "Error al instanciar el operador de la bobina numero %u", (unsigned)i);
             return MOTORES_ERROR;
         }
 
         if(mcpwm_operator_connect_timer(oper, timer) != ESP_OK)
         {
-            ESP_LOGE(TAG, "Error al conectar el operador de la bobina numero %d", i);
+            ESP_LOGE(TAG, "Error al conectar el operador de la bobina numero %u", (unsigned)i);
             return MOTORES_ERROR;
         }
 
@@ -69,7 +69,7 @@ motores_Status_t motores_init(uint32_t resolution, uint32_t period)
         mcpwm_comparator_config_t compare_config = { .flags.update_cmp_on_tez = true };
         if(mcpwm_new_comparator(oper, &compare_config, &motor[i].comparator) != ESP_OK)
         {
-            ESP_LOGE(TAG, "Error al crear el comparador de la bobina numero %d", i);
+            ESP_LOGE(TAG, "Error al crear el comparador de la bobina numero %u", (unsigned)i);
             return MOTORES_ERROR;
         }
 
@@ -78,27 +78,27 @@ motores_Status_t motores_init(uint32_t resolution, uint32_t period)
         mcpwm_generator_config_t generator_config = { .gen_gpio_num = pwm[i] };
         if(mcpwm_new_generator(oper, &generator_config, &generator) != ESP_OK)
         {
-            ESP_LOGE(TAG, "Error al crear el generador y asociarlo de la bobina numero %d", i);
+            ESP_LOGE(TAG, "Error al crear el generador y asociarlo de la bobina numero %u", (unsigned)i);
             return MOTORES_ERROR;
         }
 
         // Configurar acciones del generador: Subir al llegar a 0, bajar al coincidir con comparador
         if(mcpwm_generator_set_action_on_timer_event(generator, MCPWM_GEN_TIMER_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, MCPWM_TIMER_EVENT_EMPTY, MCPWM_GEN_ACTION_HIGH)) != ESP_OK)
         {
-            ESP_LOGE(TAG, "Error al setear evento de la bobina numero %d", i);
+            ESP_LOGE(TAG, "Error al setear evento de la bobina numero %u", (unsigned)i);
             return MOTORES_ERROR;
         }
 
         if(mcpwm_generator_set_action_on_compare_event(generator, MCPWM_GEN_COMPARE_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, motor[i].comparator, MCPWM_GEN_ACTION_LOW)) != ESP_OK)
         {
-            ESP_LOGE(TAG, "Error al setear evento de la bobina numero %d", i);
+            ESP_LOGE(TAG, "Error al setear evento de la bobina numero %u", (unsigned)i);
             return MOTORES_ERROR;
         }
 
         // Se inicializar a 0% duty
         if(mcpwm_comparator_set_compare_value(motor[i].comparator, 0) != ESP_OK)
         {
-            ESP_LOGE(TAG, "Error al inicializar dutycycle a 0% de la bobina numero %d", i);
+            ESP_LOGE(TAG, "Error al inicializar dutycycle a 0%% de la bobina numero %u", (unsigned)i);
             return MOTORES_ERROR;
         }
     }

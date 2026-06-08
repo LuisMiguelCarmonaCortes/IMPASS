@@ -35,7 +35,6 @@
 #include <stdint.h>
 #include "driver/spi_master.h"
 
-
 /* ===== Definiciones de registros volatiles =====*/
 
 #define AS5047D_NOP         0x00    // No operacion
@@ -113,7 +112,7 @@ typedef struct {
 typedef enum {
     AS5047D_OK = 0,
     AS5047D_ERROR,
-    SPI_ERROR,
+    AS5047D_ERR_SPI,
     AS5047D_INVALID_PARAM
 } as5047d_Status_t;
 

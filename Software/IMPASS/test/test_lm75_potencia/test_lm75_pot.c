@@ -1,14 +1,18 @@
-#ifndef UNIT_TEST
+#ifdef UNIT_TEST
 
 #include <stdio.h>
 #include <unity.h>
 #include "lm75.h"
+#include "utils.h"
 #include "definitions.h"
 #include "driver/i2c.h"
 
+#define I2C_MASTER_NUM      I2C_NUM_0
+#define I2C_MASTER_FREQ_HZ  100000
+
 /* Funciones obligatorias de Unity */
 void setUp(void) {
-
+    
 }
 
 void tearDown(void) {
@@ -77,6 +81,9 @@ void test_lm75_config_and_limits(void) {
 
 /* --- Punto de entrada para PlatformIO --- */
 void app_main(void) {
+
+    i2c_init(I2C_MASTER_NUM, I2C_MASTER_FREQ_HZ);
+
     UNITY_BEGIN();
 
     RUN_TEST(test_lm75_init_and_read);

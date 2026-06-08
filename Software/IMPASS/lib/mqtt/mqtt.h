@@ -1,4 +1,4 @@
-/******************************************************************************
+/****************************************************************************** 
  * @file    mqtt.h
  * @brief   Librería para gestión de comunicación MQTT con colas RX/TX
  *          en el sistema IMPASS (ESP32-S3)
@@ -43,6 +43,8 @@
 #include "esp_wifi.h"
 #include "nvs_flash.h"
 #include "esp_netif.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/queue.h"
 
 #define MQTT_TOPIC_MAX 64
 #define MQTT_DATA_MAX  128
@@ -58,12 +60,12 @@ extern QueueHandle_t mqtt_tx_queue;
 extern esp_mqtt_client_handle_t mqtt_client;
 
 /* ===== Configuarcion WiFi =====*/
-#define WIFI_SSID "NOMBRE"
-#define WIFI_PASS "CONTRA"
+#define WIFI_SSID "GPON3817_2.4G."
+#define WIFI_PASS "SeyySfdJ"
 
 /* ===== Configuarcion MQTT =====*/
-#define MQTT_BROKER_IP      "IP"
-#define MQTT_BROKER_PORT    "PORT"
+#define MQTT_BROKER_IP      "test.mosquitto.org"
+#define MQTT_BROKER_PORT    1883
 
 #define MQTT_URI            "mqtt://" MQTT_BROKER_IP ":1883"
 
@@ -82,4 +84,4 @@ void mqtt_publish(const char *topic, const char *msg);
 
 void system_init(void);
 
-#endif
+#endif 

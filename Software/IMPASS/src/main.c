@@ -19,6 +19,8 @@
 
 #ifndef PIO_UNIT_TESTING
 
+SemaphoreHandle_t spi_mutex = NULL;
+SemaphoreHandle_t i2c_mutex = NULL;
 void init_hardware()
 {
     if(i2c_init(I2C_MASTER_NUM, I2C_MASTER_FREQ_HZ) != ESP_OK) 
@@ -67,7 +69,7 @@ void vTaskIntensidades(void *pvParameters)
         for(int i = 0; i<8; i++)
         {
             mcp3008_amperios(&mcp3008, canales[i], &amp);
-            printf("[Canal %d]: %.2f A\n", i);
+            printf("[Canal %d]: %.2f A\n", i, (double)amp);
         }
         
         vTaskDelay(pdMS_TO_TICKS(2 * SLEEP_SEGUNDO));
@@ -83,7 +85,7 @@ void vTaskInclinacion(void *pvParameters)
 
     while (1)
     {
-        as5047d_read_bits(&as5047d, AS5047D_ANGLEUNC, NULL, &ang);
+        as5047d_read_bits(&as5047d, AS5047D_ANGLEUNC, 0, &ang);
         printf("[AS5047D] %u\n", ang);
         vTaskDelay(pdMS_TO_TICKS(3 * SLEEP_SEGUNDO));
     }
@@ -184,10 +186,10 @@ void init_mqtt_tasks()
 
 void init_sensor_tasks()
 {
-    xTaskCreatePinnedToCore(vTaskTemperaturas, "Temperaturas", 2048, NULL, 2, NULL, 1);
-    xTaskCreatePinnedToCore(vTaskIntensidades, "Intensidades", 2048, NULL, 2, NULL, 1);
-    xTaskCreatePinnedToCore(vTaskInclinacion, "Inclinacion", 2048, NULL, 2, NULL, 1);
-    xTaskCreatePinnedToCore(vTaskMotores, "Motores", 2048, NULL, 3, NULL, 1);
+    xTaskCreatePinnedToCore(vTaskTemperaturas, "Temperaturas", 4096, NULL, 2, NULL, 1);
+    xTaskCreatePinnedToCore(vTaskIntensidades, "Intensidades", 4096, NULL, 2, NULL, 1);
+    xTaskCreatePinnedToCore(vTaskInclinacion, "Inclinacion", 4096, NULL, 2, NULL, 1);
+    xTaskCreatePinnedToCore(vTaskMotores, "Motores", 4096, NULL, 3, NULL, 1);
 }
 
 void app_main(void) 

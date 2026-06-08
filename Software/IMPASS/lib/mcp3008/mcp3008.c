@@ -1,6 +1,8 @@
 #include "mcp3008.h"
 #include "esp_log.h"
 #include "definitions.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/semphr.h"
 
 extern SemaphoreHandle_t spi_mutex;
 
@@ -19,7 +21,7 @@ mcp3008_Status_t mcp3008_init(mcp3008_t *dev) {
     // Se agrega el dispositivo al bus SPI
     if(spi_bus_add_device(SPI2_HOST, &dev_cfg, &dev->spi_handle) != ESP_OK) {
         ESP_LOGE(TAG, "No se pudo agregar el ADC al bus SPI");
-        return SPI_ERROR;
+        return MCP3008_ERR_SPI;
     }
 
     return MCP3008_OK;
@@ -51,7 +53,7 @@ mcp3008_Status_t mcp3008_read_channel (mcp3008_t *dev, uint8_t channel, uint16_t
         if (ret != ESP_OK)
         {
             ESP_LOGE(TAG, "Fallo al enviar el comando");
-            return SPI_ERROR;
+            return MCP3008_ERR_SPI;
         }
 
         // El resultado esta en los ultimos 10 bits
@@ -70,7 +72,7 @@ mcp3008_Status_t mcp3008_raw_to_mv(mcp3008_t *dev, uint8_t channel, uint16_t *vr
     if(mcp3008_read_channel(dev, channel, &result) != MCP3008_OK)
     {
         ESP_LOGE(TAG, "Fallo al obtener raw");
-        return SPI_ERROR;
+        return MCP3008_ERR_SPI;
     }
 
     // Se convierte de raw a mV, teniendo en cuenta VREF

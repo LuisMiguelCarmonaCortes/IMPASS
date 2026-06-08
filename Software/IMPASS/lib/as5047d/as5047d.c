@@ -1,4 +1,7 @@
 #include "as5047d.h"
+#include "esp_log.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/semphr.h"
 
 extern SemaphoreHandle_t spi_mutex;
 
@@ -17,7 +20,7 @@ as5047d_Status_t as5047d_init(as5047d_t *dev)
     // Se agrega el dispositivo al bus SPI
     if(spi_bus_add_device(SPI2_HOST, &dev_cfg, &dev->spi_handle) != ESP_OK) {
         ESP_LOGE(TAG, "No se pudo agregar el inclinometro al bus SPI");
-        return SPI_ERROR;
+        return AS5047D_ERR_SPI;
     }
 
     return AS5047D_OK;
@@ -65,17 +68,17 @@ as5047d_Status_t as5047d_read_register(as5047d_t *dev, uint16_t registro, uint16
         if (ret != ESP_OK)
         {
             ESP_LOGE(TAG, "Fallo al enviar el comando");
-            return SPI_ERROR;
+            return AS5047D_ERR_SPI;
         }
 
         // El frame recibido se guarda en la variable dato
-        *dato = rx_data[1] | rx_data[2];
+        *dato = rx_data[1] | rx_data[0];
         
         // si el bit 14 es 1 es que hay error
-        if((*dato & 0x40) == 1)
+        if((*dato & 0x40) != 0)
         {
             ESP_LOGE(TAG, "Error en el frame mandado");
-            return SPI_ERROR;
+            return AS5047D_ERR_SPI;
         }
 
         // El resultado esta en los ultimos 13 bits

@@ -73,7 +73,7 @@ typedef struct {
 typedef enum {
     MCP3008_OK = 0,
     MCP3008_ERROR,
-    SPI_ERROR,
+    MCP3008_ERR_SPI,
     MCP3008_INVALID_PARAM
 } mcp3008_Status_t;
 
