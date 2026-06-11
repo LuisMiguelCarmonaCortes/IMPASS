@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
@@ -10,6 +11,8 @@
 #include "mqtt.h"
 #include "definitions.h"
 #include "utils.h"
+#include "process_mqtt.h"
+#include "topics.h"
 
 
 #define I2C_MASTER_NUM      I2C_NUM_0
@@ -41,16 +44,51 @@ void vTaskTemperaturas(void *pvParameters)
     lm75_Init(&sensor_pot, LM75_POWER_ADDR);
 
     float temp1, temp2;
+    sensor_cmd_t comando_recibido;
+    mqtt_msg_t respuesta_mqtt;
 
-    /*TODO: Un topic MQTT hará que se lea una temperatura o las dos*/
     while(1)
     {
-        lm75_read_celsius_temp(&sensor_log, &temp1);
-        lm75_read_celsius_temp(&sensor_pot, &temp2);
-        printf("[TEMP_LOG] %.2f°C\n", temp1);
-        printf("[TEMP_POT] %.2f°C\n", temp2);
+        if (xQueueReceive(temp_cmd_queue, &comando_recibido, portMAX_DELAY))
+        {
+            if (comando_recibido.cmd == SENSOR_CMD_GET_TEMP_ALL)
+            {
+                lm75_read_celsius_temp(&sensor_log, &temp1);
+                lm75_read_celsius_temp(&sensor_pot, &temp2);
+                printf("[TEMP_LOG] %.2f°C\n", temp1);
+                printf("[TEMP_POT] %.2f°C\n", temp2);
 
-        vTaskDelay(pdMS_TO_TICKS(2 * SLEEP_SEGUNDO));
+                memset(&respuesta_mqtt, 0, sizeof(mqtt_msg_t));
+                strcpy(respuesta_mqtt.topic, MQTT_TOPIC_DATA_TEMP);
+                snprintf(respuesta_mqtt.data, sizeof(respuesta_mqtt.data), "%.2f", temp1);
+                xQueueSend(mqtt_tx_queue, &respuesta_mqtt, 0);
+
+                memset(&respuesta_mqtt, 0, sizeof(mqtt_msg_t));
+                strcpy(respuesta_mqtt.topic, MQTT_TOPIC_DATA_TEMP);
+                snprintf(respuesta_mqtt.data, sizeof(respuesta_mqtt.data), "%.2f", temp2);
+                xQueueSend(mqtt_tx_queue, &respuesta_mqtt, 0);
+            }
+            else if (comando_recibido.cmd == SENSOR_CMD_GET_TEMP_LOGIC)
+            {
+                lm75_read_celsius_temp(&sensor_log, &temp1);
+                printf("[TEMP_LOG] %.2f°C\n", temp1);
+
+                memset(&respuesta_mqtt, 0, sizeof(mqtt_msg_t));
+                strcpy(respuesta_mqtt.topic, MQTT_TOPIC_DATA_TEMP);
+                snprintf(respuesta_mqtt.data, sizeof(respuesta_mqtt.data), "%.2f", temp1);
+                xQueueSend(mqtt_tx_queue, &respuesta_mqtt, 0);
+            }
+            else if (comando_recibido.cmd == SENSOR_CMD_GET_TEMP_POWER)
+            {
+                lm75_read_celsius_temp(&sensor_pot, &temp2);
+                printf("[TEMP_POT] %.2f°C\n", temp2);
+
+                memset(&respuesta_mqtt, 0, sizeof(mqtt_msg_t));
+                strcpy(respuesta_mqtt.topic, MQTT_TOPIC_DATA_TEMP);
+                snprintf(respuesta_mqtt.data, sizeof(respuesta_mqtt.data), "%.2f", temp2);
+                xQueueSend(mqtt_tx_queue, &respuesta_mqtt, 0);
+            }
+        }
     }
 }
 
@@ -60,19 +98,38 @@ void vTaskIntensidades(void *pvParameters)
     mcp3008_init(&mcp3008);
 
     float amp;
+    sensor_cmd_t comando_recibido;
+    mqtt_msg_t respuesta_mqtt;
 
-    /*TODO: un topic de MQTT hara que se lea el canal o canales*/
     uint8_t canales[] = {MCP_SGL_CH0, MCP_SGL_CH1, MCP_SGL_CH2, MCP_SGL_CH3, MCP_SGL_CH4, MCP_SGL_CH5, MCP_SGL_CH6, MCP_SGL_CH7};
 
     while (1)
     {
-        for(int i = 0; i<8; i++)
+        if (xQueueReceive(current_cmd_queue, &comando_recibido, portMAX_DELAY))
         {
-            mcp3008_amperios(&mcp3008, canales[i], &amp);
-            printf("[Canal %d]: %.2f A\n", i, (double)amp);
+            if (comando_recibido.cmd == SENSOR_CMD_GET_CURRENT_ALL)
+            {
+                char payload_completo[MQTT_DATA_MAX] = {0};
+                char token_canal[32] = {0};
+
+                for(int i = 0; i<8; i++)
+                {
+                    mcp3008_amperios(&mcp3008, canales[i], &amp);
+                    printf("[Canal %d]: %.2f A\n", i, (double)amp);
+
+                    snprintf(token_canal, sizeof(token_canal), "CH%d:%.2fA ", i, (double)amp);
+                    if (strlen(payload_completo) + strlen(token_canal) < MQTT_DATA_MAX)
+                    {
+                        strcat(payload_completo, token_canal);
+                    }
+                }
+
+                memset(&respuesta_mqtt, 0, sizeof(mqtt_msg_t));
+                strcpy(respuesta_mqtt.topic, MQTT_TOPIC_DATA_CURRENT);
+                strcpy(respuesta_mqtt.data, payload_completo);
+                xQueueSend(mqtt_tx_queue, &respuesta_mqtt, 0);
+            }
         }
-        
-        vTaskDelay(pdMS_TO_TICKS(2 * SLEEP_SEGUNDO));
     }
 }
 
@@ -82,12 +139,24 @@ void vTaskInclinacion(void *pvParameters)
     as5047d_init(&as5047d);
 
     uint16_t ang;
+    sensor_cmd_t comando_recibido;
+    mqtt_msg_t respuesta_mqtt;
 
     while (1)
     {
-        as5047d_read_bits(&as5047d, AS5047D_ANGLEUNC, 0, &ang);
-        printf("[AS5047D] %u\n", ang);
-        vTaskDelay(pdMS_TO_TICKS(3 * SLEEP_SEGUNDO));
+        if (xQueueReceive(angle_cmd_queue, &comando_recibido, portMAX_DELAY))
+        {
+            if (comando_recibido.cmd == SENSOR_CMD_GET_ANGLE)
+            {
+                as5047d_read_bits(&as5047d, AS5047D_ANGLEUNC, 0, &ang);
+                printf("[AS5047D] %u\n", ang);
+
+                memset(&respuesta_mqtt, 0, sizeof(mqtt_msg_t));
+                strcpy(respuesta_mqtt.topic, MQTT_TOPIC_DATA_ANGLE);
+                snprintf(respuesta_mqtt.data, sizeof(respuesta_mqtt.data), "%u", ang);
+                xQueueSend(mqtt_tx_queue, &respuesta_mqtt, 0);
+            }
+        }
     }
 }
 
@@ -130,9 +199,14 @@ void vTaskMotores(void *pvParameters)
     gpio_set_direction(EJE3_PWM6, GPIO_MODE_OUTPUT);
     gpio_set_level(EJE3_PWM6, 0);
 
+    motor_cmd_t comando_recibido;
+
     while (1)
     {
-        vTaskDelay(pdMS_TO_TICKS(4 * SLEEP_SEGUNDO));
+        if (xQueueReceive(motor_cmd_queue, &comando_recibido, portMAX_DELAY))
+        {
+            // Aquí se procesarán los comandos del motor cuando se asigne el hardware pertinente
+        }
     }
 }
 
@@ -148,12 +222,7 @@ void recibir_MQTT(void *pvParameters)
             printf("TOPIC: %s\n", msg.topic);
             printf("DATA: %s\n", msg.data);
 
-            // Aquí decides qué hacer
-            // Ejemplo:
-            if (strcmp(msg.topic, "impass/motor") == 0)
-            {
-                // actuar sobre motores
-            }
+            mqtt_process_message(&msg);
         }
     }
 }
@@ -177,6 +246,9 @@ void mandar_MQTT(void *pvParameters)
 void init_mqtt_tasks()
 {
     system_init();
+
+    mqtt_router_init();
+
     // Recibir mensajes MQTT en núcleo 0
     xTaskCreatePinnedToCore(recibir_MQTT,"RecibirMQTT", 4096, NULL, 2, NULL, 0);
 
@@ -197,8 +269,10 @@ void app_main(void)
     init_hardware();
 
     // Inicializar tareas
-    init_sensor_tasks();   // Núcleo 1
+
     init_mqtt_tasks();     // Núcleo 0
+
+    init_sensor_tasks();   // Núcleo 1
 }
 
 #endif
