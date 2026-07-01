@@ -9130,6 +9130,16 @@
 		)
 		(uuid "39c0e30a-a243-4457-b096-f44780f54c19")
 	)
+	(label "SCL_b"
+		(at 163.83 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5e772c8d-b326-4ded-90f0-8d355cec72ba")
+	)
 	(label "SDA"
 		(at 80.01 69.85 0)
 		(effects
@@ -9149,6 +9159,16 @@
 			(justify left bottom)
 		)
 		(uuid "68c6889f-405a-42b9-bcdb-7789bfdcccd0")
+	)
+	(label "SDA_b"
+		(at 153.67 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6ada0c66-dc52-4790-9165-51749a370f7c")
 	)
 	(label "Tx"
 		(at 127 26.67 0)
