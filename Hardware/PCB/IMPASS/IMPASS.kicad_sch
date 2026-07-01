@@ -610,196 +610,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:LED"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LED"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Light emitting diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "LED diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "LED_0_1"
-				(polyline
-					(pts
-						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "LED_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -1909,16 +1719,16 @@
 		(uuid "5ea34148-705d-4aac-acc9-297ced7cce52")
 	)
 	(junction
+		(at 71.12 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6cf4e50a-ba2a-4862-936f-fbeff18893c7")
+	)
+	(junction
 		(at 71.12 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "705fb6d8-1ee5-483a-a61f-828bba72ded1")
-	)
-	(junction
-		(at 123.19 121.92)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "802023de-9c43-49a7-9797-a2732760220c")
 	)
 	(junction
 		(at 173.99 121.92)
@@ -1963,12 +1773,6 @@
 		(uuid "bca19e06-fe8f-4cde-bb7f-1361c2fb72f0")
 	)
 	(junction
-		(at 184.15 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c346ce9d-258e-4d1d-b1de-ca8ca7d72a89")
-	)
-	(junction
 		(at 138.43 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1979,12 +1783,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d306475d-f706-4d54-8760-dbb9593c6279")
-	)
-	(junction
-		(at 123.19 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ddc6658b-4738-4441-a6a3-4918ef2a923a")
 	)
 	(junction
 		(at 116.84 121.92)
@@ -2019,16 +1817,6 @@
 			(type default)
 		)
 		(uuid "02365d30-ed05-4c6d-88a2-e834f9850d63")
-	)
-	(wire
-		(pts
-			(xy 123.19 123.19) (xy 123.19 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0f0e749b-cf24-4586-8c19-daf545908955")
 	)
 	(wire
 		(pts
@@ -2212,16 +2000,6 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 138.43) (xy 190.5 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4799760e-fafb-4213-82f6-d7acdcd15223")
-	)
-	(wire
-		(pts
 			(xy 184.15 134.62) (xy 184.15 138.43)
 		)
 		(stroke
@@ -2332,7 +2110,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 121.92) (xy 138.43 121.92)
+			(xy 116.84 121.92) (xy 138.43 121.92)
 		)
 		(stroke
 			(width 0)
@@ -2452,16 +2230,6 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 123.19) (xy 190.5 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8550ba90-318f-4957-8ea9-4ef4eba8b2d3")
-	)
-	(wire
-		(pts
 			(xy 116.84 115.57) (xy 116.84 121.92)
 		)
 		(stroke
@@ -2542,16 +2310,6 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 138.43) (xy 123.19 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a8aa1b61-1d93-4e30-a4f9-3f14ac6739ac")
-	)
-	(wire
-		(pts
 			(xy 168.91 119.38) (xy 172.72 119.38)
 		)
 		(stroke
@@ -2582,7 +2340,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 138.43) (xy 138.43 138.43)
+			(xy 116.84 138.43) (xy 138.43 138.43)
 		)
 		(stroke
 			(width 0)
@@ -2619,16 +2377,6 @@
 			(type default)
 		)
 		(uuid "b7d418f7-f840-4461-a6ce-be8199b07dc1")
-	)
-	(wire
-		(pts
-			(xy 116.84 121.92) (xy 123.19 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8a42779-d65f-430c-8207-73237dc2485b")
 	)
 	(wire
 		(pts
@@ -2927,87 +2675,6 @@
 			(project "IMPASS"
 				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2"
 					(reference "R83")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 190.5 127 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0d7f0c9c-3c0d-4951-84ee-32d72dfc2a15")
-		(property "Reference" "D9"
-			(at 192.278 124.714 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED"
-			(at 192.278 126.746 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 190.5 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 190.5 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 190.5 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a3f2b879-0a64-41e8-af6c-c379c677d919")
-		)
-		(pin "2"
-			(uuid "d556c7c0-9bac-45bd-8f05-db532da2ba2f")
-		)
-		(instances
-			(project "IMPASS"
-				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2"
-					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -3750,6 +3417,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 71.12 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ae41cab1-ff19-47ef-ba51-b86d71e24744")
+		(property "Reference" "#PWR060"
+			(at 71.12 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+12V"
+			(at 71.12 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 71.12 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 71.12 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4f83820b-f257-4dde-87a4-8471209b8dfa")
+		)
+		(instances
+			(project "IMPASS"
+				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2"
+					(reference "#PWR060")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x04_Pin")
 		(at 48.26 124.46 0)
 		(unit 1)
@@ -3830,88 +3575,6 @@
 			(project "IMPASS"
 				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 123.19 134.62 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b9cc80cd-7643-4963-9a62-0dd27dc620c4")
-		(property "Reference" "R34"
-			(at 125.73 133.3499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100"
-			(at 125.73 135.8899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 121.412 134.62 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 123.19 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 123.19 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "33a49e25-ab03-4183-b896-9c4b4a298759")
-		)
-		(pin "1"
-			(uuid "c811fe18-9783-4c50-8f86-f9dd054165e0")
-		)
-		(instances
-			(project "IMPASS"
-				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2"
-					(reference "R34")
 					(unit 1)
 				)
 			)
@@ -4412,169 +4075,6 @@
 			(project "IMPASS"
 				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2"
 					(reference "#PWR53")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 190.5 134.62 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fa117195-49fe-4a4f-a023-93f95c60c1a8")
-		(property "Reference" "R85"
-			(at 193.04 133.3499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100"
-			(at 193.04 135.8899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 188.722 134.62 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 190.5 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 190.5 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "e882cf0a-6be4-4151-ac78-2677604a4449")
-		)
-		(pin "1"
-			(uuid "9f801d83-2e64-4bd8-b656-0a1f9575ac82")
-		)
-		(instances
-			(project "IMPASS"
-				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2"
-					(reference "R85")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 123.19 127 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "fec3a724-07ba-431e-aa32-bdee988aff03")
-		(property "Reference" "D8"
-			(at 124.968 124.714 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED"
-			(at 124.968 126.746 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 123.19 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 123.19 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 123.19 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a74d513d-4323-47e5-81f6-d68ae081b1a9")
-		)
-		(pin "2"
-			(uuid "f1c87fad-5a21-4b73-8c32-c9e9c9a96216")
-		)
-		(instances
-			(project "IMPASS"
-				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2"
-					(reference "D8")
 					(unit 1)
 				)
 			)

@@ -50,7 +50,23 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 0.0,
+          "corner_smoothing": 0,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 0.5,
+          "min_island_area": 10.0,
+          "min_thickness": 0.25,
+          "pad_connection": 1,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.5,
+          "thermal_relief_spoke_width": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -197,7 +213,8 @@
       "track_widths": [
         0.0,
         0.2,
-        0.5
+        0.5,
+        1.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -650,7 +667,7 @@
         "uuid": "731b3037-3e9a-4423-b2c0-b5bf223d88c2"
       }
     ],
-    "used_designators": "D7",
+    "used_designators": "J3,J30,R59-82,R89-99,U11-12,U16,Q1,Q5,Q7,Q10,Q17,Q22,#PWR32-34,#PWR36,#PWR38,#PWR40,#PWR42,#PWR47-48,#PWR50-51,#PWR60-61,#PWR63,#PWR104-126,C29-31,D1,D7,D10",
     "variants": []
   },
   "sheets": [

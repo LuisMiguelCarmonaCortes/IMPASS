@@ -2034,172 +2034,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Diode:SS14"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SS14"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Diode_SMD:D_SMA"
-				(at 0 -4.445 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.vishay.com/docs/88746/ss12.pdf"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "40V 1A Schottky Diode, SMA"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "diode Schottky"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "D*SMA*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SS14_0_1"
-				(polyline
-					(pts
-						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SS14_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Mechanical:MountingHole_Pad"
 			(pin_numbers
 				(hide yes)
@@ -2578,18 +2412,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(junction
-		(at 45.72 20.32)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "05340555-6485-492c-bab1-fed916491ebe")
-	)
-	(junction
-		(at 45.72 17.78)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "629d7376-4bee-46bd-bba7-d7e36856157f")
-	)
 	(wire
 		(pts
 			(xy 102.87 99.06) (xy 78.74 99.06)
@@ -2862,16 +2684,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 15.24) (xy 46.99 15.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "27afd04f-cc0e-4519-9918-d8bc41551e0b")
-	)
-	(wire
-		(pts
 			(xy 148.59 29.21) (xy 152.4 29.21)
 		)
 		(stroke
@@ -2889,16 +2701,6 @@
 			(type default)
 		)
 		(uuid "2c5b2653-a79e-43a7-bfaf-fb26688b0f02")
-	)
-	(wire
-		(pts
-			(xy 48.26 20.32) (xy 45.72 20.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f827131-131d-4f72-bfba-621f161452a5")
 	)
 	(wire
 		(pts
@@ -3012,16 +2814,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 17.78) (xy 45.72 17.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "382f769f-c9ab-44d5-9336-5ce34ccab78f")
-	)
-	(wire
-		(pts
 			(xy 67.31 91.44) (xy 71.12 91.44)
 		)
 		(stroke
@@ -3129,16 +2921,6 @@
 			(type default)
 		)
 		(uuid "4dbe456b-718f-4ba0-87ed-bf3f9e1e0d69")
-	)
-	(wire
-		(pts
-			(xy 48.26 22.86) (xy 48.26 20.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5157def3-5fe3-4fea-a6b3-84830c0ac756")
 	)
 	(wire
 		(pts
@@ -3409,16 +3191,6 @@
 			(type default)
 		)
 		(uuid "7d534cc6-eac1-444c-86cc-43e956cbc35f")
-	)
-	(wire
-		(pts
-			(xy 46.99 15.24) (xy 46.99 17.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7da35a77-affe-4416-a6c7-8ed7a948e026")
 	)
 	(wire
 		(pts
@@ -3879,16 +3651,6 @@
 			(type default)
 		)
 		(uuid "bae0cb7f-695b-4cad-ac2b-22aeebae3813")
-	)
-	(wire
-		(pts
-			(xy 50.8 22.86) (xy 48.26 22.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bbaecc9b-2d2c-49bd-817b-efb6a1c36f3e")
 	)
 	(wire
 		(pts
@@ -5833,88 +5595,6 @@
 			(project "IMPASS"
 				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/acd98061-6367-4cb8-aa42-1ec0ef88ad06"
 					(reference "#PWR14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:SS14")
-		(at 50.8 19.05 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "951c0b90-ce35-4eff-bbe1-611a7ab711e4")
-		(property "Reference" "D7"
-			(at 53.34 17.4624 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SS14"
-			(at 53.34 20.0024 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 46.355 19.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/88746/ss12.pdf"
-			(at 50.8 19.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "40V 1A Schottky Diode, SMA"
-			(at 50.8 19.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "8f1eea67-75f7-4a23-aac1-6811a02906be")
-		)
-		(pin "1"
-			(uuid "5fcfef76-53df-421b-a502-52ea8e7d5a52")
-		)
-		(instances
-			(project "IMPASS"
-				(path "/731b3037-3e9a-4423-b2c0-b5bf223d88c2/acd98061-6367-4cb8-aa42-1ec0ef88ad06"
-					(reference "D7")
 					(unit 1)
 				)
 			)
