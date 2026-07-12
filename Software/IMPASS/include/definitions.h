@@ -60,5 +60,11 @@
 // LM75B Placa Potencia
 #define LM75_POWER_ADDR  0x48
 
+// ADS1015
+#define ADS1015_ADDR 0x49
+
+// LIS3DH
+#define LIS3DH_ADDR  0x19
+
 
 #endif

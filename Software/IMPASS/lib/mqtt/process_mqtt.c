@@ -13,6 +13,7 @@ static const char *TAG = "MQTT_ROUTER";
 QueueHandle_t temp_cmd_queue    = NULL;
 QueueHandle_t current_cmd_queue = NULL;
 QueueHandle_t angle_cmd_queue   = NULL;
+QueueHandle_t voltage_cmd_queue   = NULL;
 
 QueueHandle_t motor_cmd_queue  = NULL;
 QueueHandle_t system_cmd_queue = NULL;
@@ -30,6 +31,7 @@ void mqtt_router_init(void)
     temp_cmd_queue    = xQueueCreate(10, sizeof(sensor_cmd_t));
     current_cmd_queue = xQueueCreate(10, sizeof(sensor_cmd_t));
     angle_cmd_queue   = xQueueCreate(10, sizeof(sensor_cmd_t));
+    voltage_cmd_queue = xQueueCreate(10, sizeof(sensor_cmd_t));
 
     motor_cmd_queue  = xQueueCreate(10, sizeof(motor_cmd_t));
     system_cmd_queue = xQueueCreate(10, sizeof(system_cmd_t));
@@ -37,6 +39,7 @@ void mqtt_router_init(void)
     if(temp_cmd_queue == NULL ||
        current_cmd_queue == NULL ||
        angle_cmd_queue == NULL ||
+       voltage_cmd_queue == NULL ||
        motor_cmd_queue  == NULL ||
        system_cmd_queue == NULL)
     {
@@ -53,6 +56,10 @@ void mqtt_process_message(mqtt_msg_t *msg)
     else if(strcmp(msg->topic, MQTT_TOPIC_CMD_CURRENT) == 0)
     {
         handle_current(msg->data);
+    }
+    else if(strcmp(msg->topic, MQTT_TOPIC_CMD_VOLTAGE) == 0)
+    {
+        handle_voltage(msg->data);
     }
     else if(strcmp(msg->topic, MQTT_TOPIC_CMD_ANGLE) == 0)
     {
@@ -108,6 +115,30 @@ static void handle_current(const char *payload)
 
         xQueueSend(current_cmd_queue, &cmd, 0);
     }
+}
+
+static void handle_voltage(const char *payload)
+{
+    sensor_cmd_t cmd;
+
+    if(strcmp(payload, "ALL") == 0)
+    {
+        cmd.cmd = SENSOR_CMD_GET_VOLT_ALL;
+    }
+    else if(strcmp(payload, "CH0") == 0)
+    {
+        cmd.cmd = SENSOR_CMD_GET_VOLT_CH0;
+    }
+    else if(strcmp(payload, "CH1") == 0)
+    {
+        cmd.cmd = SENSOR_CMD_GET_VOLT_CH1;
+    }
+    else if(strcmp(payload, "CH2") == 0)
+    {
+        cmd.cmd = SENSOR_CMD_GET_VOLT_CH2;
+    }
+
+    xQueueSend(voltage_cmd_queue, &cmd, 0);
 }
 
 static void handle_angle(const char *payload)

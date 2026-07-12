@@ -1,18 +1,22 @@
 #include <stdio.h>
 #include <string.h>
+
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
 #include "driver/gpio.h"
 #include "esp_log.h"
+
 #include "lm75.h"
 #include "mcp3008.h"
-#include "as5047d.h"
-#include "mqtt.h"
-#include "definitions.h"
+#include "ads1015.h"
 #include "utils.h"
-#include "process_mqtt.h"
+#include "definitions.h"
+
 #include "topics.h"
+#include "mqtt.h"
+#include "process_mqtt.h"
+
 
 
 #define I2C_MASTER_NUM      I2C_NUM_0
@@ -133,6 +137,69 @@ void vTaskIntensidades(void *pvParameters)
     }
 }
 
+void vTaskVoltages (void *pvParameters)
+{
+    ads1015_t ads1015;
+    ads1015_Init(&ads1015, ADS1015_ADDR);
+
+    float v1;   // Voltage of channel 0
+    float v2;   // Voltage of channel 1
+    float v3;   // Voltage of channel 2
+
+    sensor_cmd_t comando_recibido;
+    mqtt_msg_t respuesta_mqtt;
+
+    while (1)
+    {
+        if(xQueueReceive(voltage_cmd_queue, &comando_recibido, portMAX_DELAY))
+        {
+            if (comando_recibido.cmd == SENSOR_CMD_GET_VOLT_ALL)
+            {
+
+            }
+            else if(comando_recibido.cmd == SENSOR_CMD_GET_VOLT_CH0)
+            {
+                ads1015_SetChannel(&ads1015, ADS1015_CANAL_0);
+                ads1015_convertRead(&ads1015, &v1);
+
+                printf("[VOLT_LOG] Channel0: %.2f°C\n", v1);
+
+                memset(&respuesta_mqtt, 0, sizeof(mqtt_msg_t));
+                strcpy(respuesta_mqtt.topic, MQTT_TOPIC_DATA_VOLTAGE);
+                snprintf(respuesta_mqtt.data, sizeof(respuesta_mqtt.data), "%.2f", v1);
+                xQueueSend(mqtt_tx_queue, &respuesta_mqtt, 0);
+            }
+            else if(comando_recibido.cmd == SENSOR_CMD_GET_VOLT_CH1)
+            {
+                ads1015_SetChannel(&ads1015, ADS1015_CANAL_1);
+                ads1015_convertRead(&ads1015, &v2);
+
+                printf("[VOLT_LOG] Channel1: %.2f°C\n", v2);
+
+                memset(&respuesta_mqtt, 0, sizeof(mqtt_msg_t));
+                strcpy(respuesta_mqtt.topic, MQTT_TOPIC_DATA_VOLTAGE);
+                snprintf(respuesta_mqtt.data, sizeof(respuesta_mqtt.data), "%.2f", v2);
+                xQueueSend(mqtt_tx_queue, &respuesta_mqtt, 0);
+            }
+            else if(comando_recibido.cmd == SENSOR_CMD_GET_VOLT_CH2)
+            {
+                ads1015_SetChannel(&ads1015, ADS1015_CANAL_2);
+                ads1015_convertRead(&ads1015, &v3);
+
+                printf("[VOLT_LOG] Channel2: %.2f°C\n", v3);
+
+                memset(&respuesta_mqtt, 0, sizeof(mqtt_msg_t));
+                strcpy(respuesta_mqtt.topic, MQTT_TOPIC_DATA_VOLTAGE);
+                snprintf(respuesta_mqtt.data, sizeof(respuesta_mqtt.data), "%.2f", v2);
+                xQueueSend(mqtt_tx_queue, &respuesta_mqtt, 0);
+            }
+        }
+    }
+    
+}
+
+/* TODO CAMBIARLO para el LIS3DH
+
 void vTaskInclinacion(void *pvParameters)
 {
     as5047d_t as5047d;
@@ -159,6 +226,7 @@ void vTaskInclinacion(void *pvParameters)
         }
     }
 }
+*/
 
 void vTaskMotores(void *pvParameters)
 {
@@ -260,7 +328,8 @@ void init_sensor_tasks()
 {
     xTaskCreatePinnedToCore(vTaskTemperaturas, "Temperaturas", 4096, NULL, 2, NULL, 1);
     xTaskCreatePinnedToCore(vTaskIntensidades, "Intensidades", 4096, NULL, 2, NULL, 1);
-    xTaskCreatePinnedToCore(vTaskInclinacion, "Inclinacion", 4096, NULL, 2, NULL, 1);
+    xTaskCreatePinnedToCore(vTaskVoltages, "Voltages", 4096, NULL, 2, NULL, 1);
+    //xTaskCreatePinnedToCore(vTaskInclinacion, "Inclinacion", 4096, NULL, 2, NULL, 1);
     xTaskCreatePinnedToCore(vTaskMotores, "Motores", 4096, NULL, 3, NULL, 1);
 }
 

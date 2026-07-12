@@ -47,6 +47,11 @@ typedef enum
     SENSOR_CMD_GET_TEMP_LOGIC,
     SENSOR_CMD_GET_TEMP_POWER,
 
+    SENSOR_CMD_GET_VOLT_ALL,
+    SENSOR_CMD_GET_VOLT_CH0,
+    SENSOR_CMD_GET_VOLT_CH1,
+    SENSOR_CMD_GET_VOLT_CH2,
+
     SENSOR_CMD_GET_CURRENT_ALL,
 
     SENSOR_CMD_GET_ANGLE
@@ -91,6 +96,7 @@ typedef struct
 
 extern QueueHandle_t temp_cmd_queue;
 extern QueueHandle_t current_cmd_queue;
+extern QueueHandle_t voltage_cmd_queue;
 extern QueueHandle_t angle_cmd_queue;
 
 extern QueueHandle_t motor_cmd_queue;
